@@ -510,14 +510,11 @@ impl SilentUpdater {
     }
 }
 
-const STABLE_ENDPOINTS: [&str; 3] = [
-    "https://update.hwdns.net/https://github.com/clash-verge-rev/clash-verge-rev/releases/download/updater/update-proxy.json",
-    "https://gh-proxy.org/https://github.com/clash-verge-rev/clash-verge-rev/releases/download/updater/update-proxy.json",
-    "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/updater/update.json",
-];
+const STABLE_ENDPOINTS: [&str; 1] =
+    ["https://github.com/wysha-object/clash-verge-rev/releases/download/updater/update.json"];
 
 const AUTOBUILD_ENDPOINTS: [&str; 1] =
-    ["https://github.com/clash-verge-rev/clash-verge-rev/releases/download/autobuild/latest.json"];
+    ["https://github.com/wysha-object/clash-verge-rev/releases/download/autobuild/latest.json"];
 
 pub async fn verge_updater(app_handle: &tauri::AppHandle) -> Result<Updater> {
     let update_channel = Config::verge()
